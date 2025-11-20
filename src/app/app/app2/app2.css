@@ -11,7 +11,7 @@ h2 {
   margin-bottom: 15px;
   text-transform: uppercase;
   color: rgb(65, 161, 24);
-}
+} 
 
 /* Details container */
 .secretary-details {
@@ -35,4 +35,5 @@ h2 {
 .info {
   font-size: 20px;
   line-height: 1.7;
+  
 }

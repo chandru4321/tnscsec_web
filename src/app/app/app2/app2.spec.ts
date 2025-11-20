@@ -11,6 +11,7 @@ describe('App2', () => {
       imports: [App2]
     })
     .compileComponents();
+    
 
     fixture = TestBed.createComponent(App2);
     component = fixture.componentInstance;
