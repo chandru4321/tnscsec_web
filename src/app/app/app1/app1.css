@@ -1,0 +1,32 @@
+.commissioner-section {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: green;
+  
+}
+
+.commissioner-details {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.arrow {
+  color: green;
+  font-size: 22px;
+  margin-right: 8px;
+  line-height: 1.2;
+}
+
+.info {
+  font-size: 20px;
+  line-height: 1.6;
+}

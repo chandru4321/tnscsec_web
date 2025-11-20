@@ -1,0 +1,110 @@
+/* Outer white box */
+.table-background {
+  background: white;
+  padding: 80px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.12);
+  width: 95%;
+  margin: 20px auto;
+    border-spacing: 40px 10px; /* BIG SPACING */
+
+}
+
+/* Table style */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+/* Table Header */
+.styled-table thead tr {
+  background: #eaf2ff; /* Light bluish background */
+  font-weight: bold;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Zebra row effect */
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f7ff;
+  transition: 0.3s;
+}
+
+
+/* Action button - GREEN */
+.btn-action {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+/* Pending button - RED */
+.btn-pending {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Hover effects */
+.btn-action:hover {
+  background-color: #1e8449;
+}
+
+.btn-pending:hover {
+  background-color: #c0392b;
+}
+.small-box {
+  padding: 10px !important;
+  border-radius: 2px !important;
+}
+/* Keep both buttons in same line */
+.action-buttons {
+  display: flex;
+  gap: 6px;           /* space between buttons */
+  align-items: center;
+  white-space: nowrap; /* prevents line-break */
+}
+
+
+.btn-action-small {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-pending-small {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+

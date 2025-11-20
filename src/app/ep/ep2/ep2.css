@@ -1,0 +1,66 @@
+/* Make sure the body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+/* This wrapper ensures vertical + horizontal centering */
+.page-wrapper {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  height: 100vh;             /* full viewport height */
+}
+
+/* Inner content */
+.election-container {
+  text-align: left;
+  font-family: "Times New Roman", serif;
+}
+
+/* Heading */
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* List styling */
+.phase-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.phase-list li {
+  position: relative;
+  font-size: 22px;
+  font-weight: bold;
+  color: #9c5600;
+  margin: 10px 0;
+  padding-left: 35px;
+}
+
+/* Green arrow */
+.phase-list li::before {
+  content: "➩";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5cb85c;
+  font-size: 20px;
+}
+
+/* Links */
+.phase-list a {
+  color: #9c5600;
+  text-decoration: none;
+}
+
+.phase-list a:hover {
+  text-decoration: underline;
+  color: #d2691e;
+}

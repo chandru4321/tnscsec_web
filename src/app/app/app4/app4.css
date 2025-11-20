@@ -1,0 +1,7 @@
+.pdf-container {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center;     /* vertically center (optional) */
+  min-height: 100vh;       /* full screen height */
+  background-color: #f9f9f9; /* optional background */
+}

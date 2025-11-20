@@ -1,0 +1,130 @@
+.manuals-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  background-color: #fff;
+}
+
+.manuals-title {
+  color: #004a99;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+
+.manuals-title .tamil {
+  font-size: 20px;
+  color: #0066cc;
+  font-weight: normal;
+}
+
+.manuals-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.manuals-gallery a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manuals-gallery img {
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid #0044cc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manuals-gallery a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.second-row {
+  margin-top: 20px;
+}
+.manuals-section {
+  text-align: left;
+  margin: 40px auto;
+  max-width: 1100px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.manuals-title {
+  color: #0044aa;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.manuals-title .tamil {
+  font-size: 19px;
+  color: #0077cc;
+}
+
+.manuals-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.manuals-list li {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.arrow {
+  color: green;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.manuals-list a {
+  color: blue;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.manuals-list a:hover {
+  color: #b30000;
+}
+
+.compendium-title {
+  color: #004a99;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.compendium-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.compendium-gallery img {
+  width: 180px;
+  height: 230px;
+  border: 2px solid #0044cc;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compendium-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,57 @@
+.vacancy-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+}
+
+.main-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 19px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.vacancy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vacancy-list li {
+    position: relative;
+    margin: 12px 0;
+    padding-left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Green arrow icon */
+.vacancy-list li::before {
+    content: "➜";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #3ca23c;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* Brownish text color (same for numbers and dates) */
+.vacancy-list a {
+    text-decoration: none;
+    color: #a05200;
+    transition: color 0.3s;
+}
+
+.vacancy-list a:hover {
+    text-decoration: underline;
+    color: #d2691e;
+}

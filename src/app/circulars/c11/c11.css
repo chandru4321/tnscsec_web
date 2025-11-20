@@ -1,0 +1,56 @@
+.general-container {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 20px 40px;
+  font-family: "Times New Roman", serif;
+  background-color: #f9f9f9;
+}
+
+.general-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #8b4513;
+  /* brown */
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+.general-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.general-list li {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 40px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Green arrow before each item */
+.general-list li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3ca23c;
+  /* green arrow */
+  font-size: 20px;
+  line-height: 22px;
+}
+
+/* Blue link style */
+.general-list a {
+  text-decoration: none;
+  color: #0074cc;
+  /* blue */
+  transition: color 0.3s ease;
+}
+
+.general-list a:hover {
+  color: #004b8f;
+  text-decoration: underline;
+}

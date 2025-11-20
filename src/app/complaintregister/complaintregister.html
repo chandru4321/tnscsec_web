@@ -1,0 +1,100 @@
+<div class="page-title">
+  <h2>தேர்தல் புகார் மனு பதிவு (REGISTER FOR ELECTION COMPLAINT PETITIONS)</h2>
+</div>
+
+<div class="form-container">
+
+  <form (ngSubmit)="submitForm()">
+
+    <!-- Row 1 -->
+    <div class="row">
+
+      <div class="col">
+        <label>Department Name</label>
+        <select [(ngModel)]="selectedName" name="selectedName" required>
+          <option value="" disabled>Select Department</option>
+          <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <label>மாவட்டம் (District)</label>
+        <select [(ngModel)]="selectedDistrict" name="selectedDistrict" required>
+          <option value="" disabled>Select District</option>
+          <option *ngFor="let d of districts" [value]="d.id">{{ d.name }}</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col">
+        <label>சங்கத்தின் பெயர் (Name of the Society)</label>
+        <input type="text" [(ngModel)]="societyName" name="societyName">
+      </div>
+
+      <div class="col">
+        <label>புகாரளிப்பவரின் பெயர் (Name of the Petitioner)</label>
+        <input type="text" [(ngModel)]="petitionerName" name="petitionerName">
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row">
+      <div class="col">
+        <label>புகாரளிப்பவரின் கைபேசி (Phone Number)</label>
+        <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber">
+      </div>
+
+      <div class="col">
+        <label>முகவரி (Address of the Petitioner)</label>
+        <input type="text" [(ngModel)]="address" name="address">
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="row">
+
+      <div class="col">
+        <label>மண்டலம் (Zone)</label>
+        <select [(ngModel)]="selectedZone" name="selectedZone">
+          <option value="" disabled>Select Zone</option>
+          <option *ngFor="let z of zones" [value]="z.id">{{ z.name }}</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <label>தாலுக்கா (Taluk)</label>
+        <input type="text" [(ngModel)]="taluk" name="taluk">
+      </div>
+
+    </div>
+
+    <!-- Row 5 -->
+    <div class="row">
+      <div class="col">
+        <label>அஞ்சல் குறியீடு (Pincode)</label>
+        <input type="text" [(ngModel)]="pincode" name="pincode">
+      </div>
+
+      <div class="col">
+        <label>புகார் சுருக்கம் (Brief Note)</label>
+
+        <!-- FIXED FILE INPUT -->
+        <input type="file"
+               name="pdfFile"
+               accept="application/pdf"
+               (change)="onFileSelected($event)">
+
+        <small>Please upload PDF only</small>
+      </div>
+    </div>
+
+    <div class="submit-btn">
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+
+</div>

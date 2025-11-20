@@ -1,0 +1,43 @@
+.officers-section {
+  font-family: "Times New Roman", serif;
+  padding: 30px;
+  color: #8b4513; /* Brown tone similar to screenshot */
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 25px;
+  color: #000; /* Black title */
+}
+
+.officer-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.officer-list li {
+  margin: 10px 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.officer-list li::before {
+  content: "➥"; /* green arrow */
+  color: green;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.officer-list a {
+  text-decoration: none;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.officer-list a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+.rti-section {
+  background-color: #ffffff;
+  padding: 40px 60px;
+  font-family: "Times New Roman", serif;
+  color: #003366;
+  width: 800px;
+}
+
+.main-title {
+  text-align: center;
+  color: #004a99;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.rti-block {
+  max-width: 800px;
+  margin-left: 40px;
+  margin: 0 auto;
+  color: #003366;
+}
+
+.officer {
+  margin-bottom: 30px;
+}
+
+.label {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 23px;
+  margin: 2px 0;
+}
+
+.phone {
+  font-size: 16px;
+  color: #003366;
+  margin-top: 3px;
+}
+
+.rti-link {
+  margin: 20px 0 30px 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 17px;
+}
+
+.rti-link .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rti-link a {
+  color: #0000cc;
+  text-decoration: none;
+}
+
+.rti-link a:hover {
+  text-decoration: underline;
+}
+
+.address {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 17px;
+  margin-top: 20px;
+  color: #003366;
+}

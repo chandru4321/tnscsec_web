@@ -1,0 +1,60 @@
+.election-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Heading styles */
+.main-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.phase-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* List styling */
+.election-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List items */
+.election-list li {
+    position: relative;
+    margin: 12px 0;
+    padding-left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Green arrow icon */
+.election-list li::before {
+    content: "➜";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #3ca23c;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* Brown text for numbers and titles */
+.election-list a {
+    text-decoration: none;
+    color: #a05200;
+    transition: color 0.3s ease;
+}
+
+.election-list a:hover {
+    text-decoration: underline;
+    color: #d2691e;
+}

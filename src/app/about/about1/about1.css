@@ -1,0 +1,22 @@
+.content-box {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Times New Roman", serif;
+  line-height: 1.8;
+  /*background-color: rgb(206, 128, 25);*/
+}
+
+.title {
+  text-align: center;
+  color: darkgreen;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.description {
+  text-align: justify;
+  color: saddlebrown;
+  font-size: 20px;
+}
