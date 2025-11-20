@@ -15,12 +15,13 @@ h2 {
 
 /* Details container */
 .secretary-details {
-  
+
   display: flex;
   align-items: flex-start;
   margin-left: 25px;
 
 }
+
 
 /* Arrow icon */
 .arrow {
