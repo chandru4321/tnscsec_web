@@ -123,8 +123,9 @@
 h4,
 .trade {
   margin-bottom: 10px;
-  color: darkblue;
-
+  color: rgb(216, 128, 14);
+  font-size: 15px;
+padding: 12px;
 
 }
 
@@ -255,6 +256,9 @@ h4,
   color: #000;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none !important;
+
+
 }
 
 .info-box:hover {
@@ -273,6 +277,8 @@ h4,
   gap: 15px;
   /* space between boxes */
   flex-wrap: wrap;
+
+  
   /* ensures it stays responsive */
 }
 
@@ -281,3 +287,13 @@ h4,
   width: 200px;
   /* control width for uniform size */
 }   
+.info-box a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.info-box a p {
+  text-decoration: none !important;
+}
+
+
