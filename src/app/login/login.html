@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div class="login-container">
+  <div class="login-card">
+
+    <h2 class="title">Welcome Back</h2>
+    <p class="subtitle">Login to continue</p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="input-group">
+        <input type="text" formControlName="username" placeholder="username">
+      </div>
+
+      <div class="input-group">
+        <input type="password" formControlName="password" placeholder="Password">
+      </div>
+
+      <button class="login-btn" type="submit">Login</button>
+    </form>
+
+    <p *ngIf="error" class="error">{{ error }}</p>
+
+  </div>
+</div>
