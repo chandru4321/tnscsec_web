@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth';
+import { AuthService } from '../../app/auth';
 
 @Component({
   standalone: true,
@@ -18,7 +18,7 @@ import { AuthService } from '../auth';
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
           <div class="input-group">
-            <input type="text" formControlName="username" placeholder="Username">
+            <input type="text" formControlName="username" placeholder="username">
           </div>
 
           <div class="input-group">
@@ -39,11 +39,7 @@ export class LoginComponent {
   form!: FormGroup;
   error: string | null = null;
 
-  constructor(
-    private fb: FormBuilder,
-    private auth: AuthService,
-    private router: Router
-  ) {
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
     this.form = this.fb.group({
       username: [''],
       password: ['']
@@ -51,16 +47,18 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    const { username, password } = this.form.value;
+  const { username, password } = this.form.value;
 
-    this.auth.login(username!, password!).subscribe({
-      next: (res) => {
-        localStorage.setItem('token', res.accessToken); // SAVE TOKEN
-        this.router.navigate(['/admin']);
-      },
-      error: () => {
-        this.error = 'Invalid Credentials';
-      }
-    });
-  }
+  this.auth.login(username, password).subscribe({
+    next: (res) => {
+      console.log("LOGIN SUCCESS", res);
+      this.router.navigate(['/admin']);
+    },
+    error: (err) => {
+      console.error(err);
+      this.error = "Invalid Credentials";
+    }
+  });
+}
+
 }

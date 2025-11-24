@@ -1,44 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
-export interface LoginResponse {
-  accessToken: string;   // must match your backend response field
-}
-
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class AuthService {
 
   private apiUrl = 'https://lg0w5w01-4000.inc1.devtunnels.ms/api/auth/login';
-  private tokenKey = 'auth_token';
+  private tokenKey = 'authToken';
 
   constructor(private http: HttpClient) {}
 
-  // LOGIN
-  login(username: string, password: string): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(this.apiUrl, { username, password }).pipe(
+  login(username: string, password: string) {
+    return this.http.post<any>(this.apiUrl, { username, password }).pipe(
       tap(res => {
-        if (res && res.accessToken) {
-          localStorage.setItem(this.tokenKey, res.accessToken);
+        console.log("LOGIN RESPONSE =", res);
+
+        const token = res?.data?.accessToken;  // <-- correct key ✔✔✔
+
+        if (token) {
+          localStorage.setItem(this.tokenKey, token);
+          console.log("TOKEN SAVED =", token);
+        } else {
+          console.error("TOKEN NOT RECEIVED FROM API");
         }
       })
     );
   }
 
-  // GET TOKEN
-  getToken(): string {
-    return localStorage.getItem(this.tokenKey) || '';
-  }
-
-  // LOGOUT
-  logout() {
-    localStorage.removeItem(this.tokenKey);
-  }
-
-  // CHECK LOGIN STATUS
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem(this.tokenKey);
+  getToken() {
+    return localStorage.getItem(this.tokenKey);
   }
 }
