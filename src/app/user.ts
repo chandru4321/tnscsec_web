@@ -8,27 +8,31 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   private baseUrl = 'https://lg0w5w01-4000.inc1.devtunnels.ms/api';
+// private baseUrl ='https://jsonplaceholder.typicode.com/;'
+
 
   constructor(private http: HttpClient) {}
 
-  // GET Departments
   getDepartments(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/departments`);
   }
 
-  // GET Districts
   getDistricts(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/districts`);
   }
 
-  
-  // GET Zones
   getZones(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/zones`);
   }
 
-  // ⭐ POST Form Submit
   submitForm(data: FormData): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/formsubmit`, data);
+    return this.http.post<any>(`${this.baseUrl}/complaint-register-form1`, data);
   }
+
+  // ⭐ GET Table Data
+  getUsers(): Observable<any> {
+   return this.http.get<any>(`${this.baseUrl}/complaint-register-form2`);
+
+  }
+
 }

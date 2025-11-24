@@ -23,7 +23,7 @@ export class Complaintregister implements OnInit {
   selectedZone = '';
   societyName = '';
   petitionerName = '';
-  phoneNumber = '';
+  mobilenumber = '';
   address = '';
   taluk = '';
   pincode = '';
@@ -69,12 +69,12 @@ export class Complaintregister implements OnInit {
 
     const formData = new FormData();
 
-    formData.append("departmentId", this.selectedName);
-    formData.append("districtId", this.selectedDistrict);
-    formData.append("zoneId", this.selectedZone);
+    formData.append("department_id", this.selectedName);
+    formData.append("district_id", this.selectedDistrict);
+    formData.append("district", this.selectedZone);
     formData.append("societyName", this.societyName);
-    formData.append("petitionerName", this.petitionerName);
-    formData.append("phoneNumber", this.phoneNumber);
+    formData.append("petitionerNameAddr", this.petitionerName);
+    formData.append("mobileNumber", this.mobilenumber);
     formData.append("address", this.address);
     formData.append("taluk", this.taluk);
     formData.append("pincode", this.pincode);

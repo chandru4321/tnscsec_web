@@ -1,9 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { Router, NavigationEnd, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, NavigationEnd, RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
-
-
 
 @Component({
   selector: 'app-root',
@@ -12,14 +9,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-
-
-
 export class App {
 
   router = inject(Router);
 
-  // signal to hide/show header & footer
   hideLayout = signal(false);
 
   constructor() {
@@ -28,13 +21,15 @@ export class App {
 
         const url = event.urlAfterRedirects.toLowerCase();
 
-        // Hide header & footer ONLY on /testlink
-        this.hideLayout.set(url.includes('complaintregister'));
-                this.hideLayout.set(url.includes('admin'));
+        this.hideLayout.set(
+          url.includes('complaintregister') ||
+          url.includes('admin') ||
+          url.includes('complaintasigning') ||
+          url.includes('login')
+        );
 
       }
     });
   }
+
 }
-
-

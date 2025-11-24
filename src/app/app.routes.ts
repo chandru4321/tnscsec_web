@@ -5,9 +5,12 @@ import { Rti } from './rti/rti';
 import { Gallery } from './gallery/gallery';
 import { Contact } from './contact/contact';
 import { Complaintregister } from './complaintregister/complaintregister';
-import { Admin } from './admin/admin';
 import { Action } from 'rxjs/internal/scheduler/Action';
 import { TakeAction } from './takeaction/takeaction';
+import { AdminComponent } from './admin/admin';
+import { Component } from '@angular/core';
+import { Complaintasigning } from './complaintasigning/complaintasigning';
+import { LoginComponent } from './login/login';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -55,10 +58,16 @@ export const routes: Routes = [
     path:'takeaction', component:TakeAction
   },
   {
-  path:'admin' ,component:Admin
+  path:'admin', component:AdminComponent
   },
+  {
+    path:'complaintasigning', component:Complaintasigning
+  },
+  {
+  path:'login',component:LoginComponent
+}
 
-  
+
   
 
 

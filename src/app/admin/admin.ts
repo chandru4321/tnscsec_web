@@ -1,24 +1,32 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { TakeAction } from '../takeaction/takeaction';
+import { CommonModule } from '@angular/common';
+import { UserService } from '../user';
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-assigning-person',
   standalone: true,
-  imports: [MatDialogModule],  // ⬅ MUST ADD THIS
+  imports: [CommonModule],
   templateUrl: './admin.html',
   styleUrls: ['./admin.css']
 })
-export class Admin {
-  constructor(private dialog: MatDialog) {}
+export class AdminComponent {
 
-  openTakeAction() {
-  this.dialog.open(TakeAction, {
-    width: '450px',       // Similar to screenshot
-    height: 'auto',       // Adjust automatically
-    panelClass: 'custom-dialog-container'
-  });
-}
+  tableData: any[] = [];
 
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.loadTable();
   }
 
+  loadTable() {
+    this.userService.getUsers().subscribe({
+      next: (res) => {
+        this.tableData = res;  
+      },
+      error: (err) => {
+        console.error("API ERROR:", err);
+      }
+    });
+  }
+}
