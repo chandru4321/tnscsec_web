@@ -25,7 +25,8 @@ export class App {
           url.includes('complaintregister') ||
           url.includes('admin') ||
           url.includes('complaintasigning') ||
-          url.includes('login')
+          url.includes('login')||
+          url.includes('takeaction')
         );
 
       }
@@ -33,3 +34,10 @@ export class App {
   }
 
 }
+
+
+
+
+
+
+

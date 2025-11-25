@@ -71,7 +71,7 @@ export class Complaintregister implements OnInit {
 
     formData.append("department_id", this.selectedName);
     formData.append("district_id", this.selectedDistrict);
-    formData.append("district", this.selectedZone);
+    formData.append("zone_id", this.selectedZone);
     formData.append("societyName", this.societyName);
     formData.append("petitionerNameAddr", this.petitionerName);
     formData.append("mobileNumber", this.mobilenumber);
@@ -96,3 +96,6 @@ export class Complaintregister implements OnInit {
   }
 
 }
+
+
+

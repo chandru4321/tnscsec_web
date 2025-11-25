@@ -27,15 +27,19 @@
         <td>{{ item.petitionerNameAddr }}</td>
         <td>{{ item.mobileNumber }}</td>
         <td>{{ item.address }}</td>
-        <td>{{ item.zone }}</td>
+        <td>{{ item.zone_id }}</td>
         <td>{{ item.taluk }}</td>
         <td>{{ item.pincode }}</td>
         <td>{{ item.remarks }}</td>
 
         <td>
-<button style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
+<button 
+  routerLink="/takeaction" 
+  style="padding: 10px 20px; background-color: #007bff; color: white;
+         border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
   Take Action
 </button>
+
         </td>
 
       </tr>
