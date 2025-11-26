@@ -10,7 +10,7 @@ import { TakeAction } from './takeaction/takeaction';
 import { AdminComponent } from './admin/admin';
 import { Component } from '@angular/core';
 import { Complaintasigning } from './complaintasigning/complaintasigning';
-import { Viewuser } from './viewuser/viewuser';
+import { Viewuser } from '../../viewuser/viewuser';
 import { LoginComponent } from './login/login';
 
 export const routes: Routes = [
@@ -22,10 +22,6 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./app/app-routing-module').then(m => m.AppRoutingModule)
     },
-
-
-
-
   {
     path: 'about',
     loadChildren: () =>
