@@ -10,7 +10,7 @@ import { TakeAction } from './takeaction/takeaction';
 import { AdminComponent } from './admin/admin';
 import { Component } from '@angular/core';
 import { Complaintasigning } from './complaintasigning/complaintasigning';
-import { LoginComponent } from './login/login';
+import { LoginComponent } from './login/logir';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -65,8 +65,10 @@ export const routes: Routes = [
   },
   {
   path:'login',component:LoginComponent
+},
+{
+  path:'viewuser',component:
 }
-
 
   
 

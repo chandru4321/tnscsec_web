@@ -109,5 +109,29 @@
   cursor: pointer;
   white-space: nowrap;
 }
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+}
 
 
+.take-btn {
+  background-color: #1976d2;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.approved-btn {
+  background-color: #ffb3b3;  /* soft red */
+  color: #800000;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+}

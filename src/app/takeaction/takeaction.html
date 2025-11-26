@@ -3,13 +3,13 @@
   <h2 class="title">Take Action</h2>
 
   <div class="form-group">
-    <label>Name</label>
-    <input [(ngModel)]="name" type="text" class="input-box small-input">
+    <label>Name <span style="color:red">*</span></label>
+    <input [(ngModel)]="name" type="text" class="input-box small-input" required>
   </div>
 
   <div class="form-group">
-    <label>Email</label>
-    <input [(ngModel)]="email" type="text" class="input-box small-input">
+    <label>PR No <span style="color:red">*</span></label>
+    <input [(ngModel)]="email" type="text" class="input-box small-input" required>
   </div>
 
   <div class="button-row">
@@ -18,6 +18,3 @@
   </div>
 
 </div>
-
-
-

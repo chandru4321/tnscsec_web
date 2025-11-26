@@ -26,7 +26,8 @@ export class App {
           url.includes('admin') ||
           url.includes('complaintasigning') ||
           url.includes('login')||
-          url.includes('takeaction')
+          url.includes('takeaction')||
+          url.includes('viewuser')
         );
 
       }

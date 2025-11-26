@@ -34,11 +34,16 @@
 
         <td>
 <button 
-  routerLink="/takeaction" 
-  style="padding: 10px 20px; background-color: #007bff; color: white;
-         border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
-  Take Action
+  (click)="openDialog(item)"
+  [ngStyle]="{
+    'background-color': item.status === 'approved' ? '#ffcccc' : '#007bff',
+    'color': item.status === 'approved' ? 'black' : 'white'
+  }"
+  style="padding: 10px 20px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;"
+>
+  {{ item.status === 'approved' ? 'Approved' : 'Take Action' }}
 </button>
+
 
         </td>
 

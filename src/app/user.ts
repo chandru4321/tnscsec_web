@@ -8,8 +8,6 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   private baseUrl = 'https://lg0w5w01-4000.inc1.devtunnels.ms/api';
-// private baseUrl ='https://jsonplaceholder.typicode.com/;'
-
 
   constructor(private http: HttpClient) {}
 
@@ -29,10 +27,23 @@ export class UserService {
     return this.http.post<any>(`${this.baseUrl}/complaint-register-form1`, data);
   }
 
-  // ⭐ GET Table Data
   getUsers(): Observable<any> {
-   return this.http.get<any>(`${this.baseUrl}/complaint-register-form2`);
+    return this.http.get<any>(`${this.baseUrl}/complaint-register-form2`);
+  }
 
+  // ⭐ UPDATE STATUS – FIXED URL WITH ID
+  updateStatus(id: number, body: any): Observable<any> {
+    return this.http.put<any>(
+      `${this.baseUrl}/complaint-register-form2/update-status/${id}`,
+      body
+    );
+  }
+
+  // ⭐⭐ NEW API → complaint-status?mobileNumber=xxxx
+  getComplaintStatus(mobileNumber: string): Observable<any> {
+    return this.http.get<any>(
+      `${this.baseUrl}/complaint-status?mobileNumber=${mobileNumber}`
+    );
   }
 
 }

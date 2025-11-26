@@ -1,0 +1,17 @@
+<input type="text" [(ngModel)]="mobileNumber" placeholder="Enter Mobile Number">
+<button (click)="searchComplaint()">Search</button>
+
+<!-- Show table only if found -->
+<div *ngIf="complaintData">
+  <table border="1">
+    <tr><th>ID</th><td>{{ complaintData.id }}</td></tr>
+    <tr><th>Petitioner Name</th><td>{{ complaintData.petitionerNameAddr }}</td></tr>
+    <tr><th>Society</th><td>{{ complaintData.societyName }}</td></tr>
+    <tr><th>Status</th><td>{{ status }}</td></tr>
+    <tr><th>Mobile</th><td>{{ complaintData.mobileNumber }}</td></tr>
+    <tr><th>PDF</th><td>{{ complaintData.pdfFile }}</td></tr>
+  </table>
+</div>
+
+<!-- If not found -->
+<p *ngIf="notFound">No complaint found for this number.</p>
