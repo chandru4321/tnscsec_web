@@ -17,6 +17,9 @@ import { TakeAction } from '../takeaction/takeaction';
 export class AdminComponent {
 
   tableData: any[] = [];
+  statusMessage: string = "";
+statusType: string = ""; // "success" | "error"
+
 
   constructor(
     private http: HttpClient,
@@ -62,14 +65,26 @@ export class AdminComponent {
         body
       ).subscribe({
         next: (res) => {
-          alert("Status Updated Successfully!");
+         // alert("Status Updated Successfully!");
 
           // Update UI button to "Approved"
+          this.statusType = "success";
+this.statusMessage = "Status Updated Successfully!";
+setTimeout(() => {
+  this.statusMessage = "";
+}, 4000); // au
+
           row.status = "approved";
         },
         error: (err) => {
           console.error("Update API Error:", err);
-          alert("Update failed! Check API.");
+          //alert("Update failed! Check API.");
+          this.statusType = "error";
+this.statusMessage = "Update failed! Check API.";
+setTimeout(() => {
+  this.statusMessage = "";
+}, 4000); // au
+
         }
       });
     }

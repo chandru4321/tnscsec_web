@@ -1,0 +1,177 @@
+/* Page background */
+body, .form-container {
+  background-color: #f5e4c8; /* light cream/brown background */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-title h2 {
+  color: #6a4f32;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Main form container */
+.form-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Row spacing */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Each column */
+.col {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4a3b2a;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #fdfdfd;
+}
+
+/* File input */
+input[type="file"] {
+  margin-top: 5px;
+}
+
+small {
+  color: #777;
+}
+
+/* Submit button area */
+.submit-btn {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Submit button */
+button {
+  background-color: #3e8e41;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f6b32;
+}
+
+/* Make all inputs same height */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  width: 100%;
+  height: 42px !important;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+}
+
+/* Remove number field arrows completely */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;  /* Firefox fix */
+}
+
+
+.success-box {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error-box {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.top-message-box {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.top-message-box.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.top-message-box.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+
+
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+

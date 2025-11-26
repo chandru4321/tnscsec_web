@@ -10,7 +10,8 @@ import { TakeAction } from './takeaction/takeaction';
 import { AdminComponent } from './admin/admin';
 import { Component } from '@angular/core';
 import { Complaintasigning } from './complaintasigning/complaintasigning';
-import { LoginComponent } from './login/logir';
+import { Viewuser } from './viewuser/viewuser';
+import { LoginComponent } from './login/login';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -64,10 +65,10 @@ export const routes: Routes = [
     path:'complaintasigning', component:Complaintasigning
   },
   {
-  path:'login',component:LoginComponent
+  path:'login', component:LoginComponent
 },
 {
-  path:'viewuser',component:
+  path:'viewuser',component:Viewuser
 }
 
   
