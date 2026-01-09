@@ -1,65 +1,63 @@
- c
+/* EP-4 Newly Registered Societies */
+.newly-registered-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+}
 
- /* Center and give spacing */
- .leftover-container {
-     max-width: 700px;
-     margin: 60px auto;
-     padding: 20px;
-     font-family: "Times New Roman", serif;
- }
+/* Reuse same title style */
+.newly-registered-container .main-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
 
- /* Main Title */
- .title {
-     font-size: 25px;
-     font-weight: bold;
-     color: #000;
-     margin-bottom: 10px;
- }
+/* Reuse subtitle */
+.newly-registered-container .subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
 
- /* Subheading */
- .subtitle {
-     font-size: 19px;
-     color: #333;
-     font-weight: 600;
-     margin-bottom: 25px;
- }
+/* List reset */
+.newly-registered-container .society-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
- /* Remove default bullets */
- .society-list {
-     list-style: none;
-     padding: 0;
-     margin: 0;
- }
+/* List items */
+.newly-registered-container .society-list li {
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    color: #9c5600;
+    margin: 10px 0;
+    padding-left: 35px;
+}
 
- /* Each item */
- .society-list li {
-     position: relative;
-     margin: 12px 0;
-     padding-left: 35px;
-     font-size: 18px;
-     font-weight: bold;
- }
+/* Green arrow */
+.newly-registered-container .society-list li::before {
+    content: "➜";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #3ca23c;
+    font-size: 20px;
+    line-height: 20px;
+}
 
- /* Green arrow icon */
- .society-list li::before {
-     content: "➜";
-     position: absolute;
-     left: 0;
-     top: 0;
-     color: #3ca23c;
-     font-size: 20px;
-     line-height: 20px;
- }
+/* Links */
+.newly-registered-container .society-list a {
+    text-decoration: none;
+    color: #a05200;
+}
 
- /* Link text */
- .society-list a {
-     text-decoration: none;
-     color: #a05200;
-     /* brownish */
-     transition: color 0.3s;
- }
-
- .society-list a:hover {
-     text-decoration: underline;
-     color: #d2691e;
- }
+.newly-registered-container .society-list a:hover {
+    text-decoration: underline;
+    color: #d2691e;
+}

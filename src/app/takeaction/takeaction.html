@@ -3,13 +3,23 @@
   <h2 class="title">Take Action</h2>
 
   <div class="form-group">
-    <label>Name <span style="color:red">*</span></label>
-    <input [(ngModel)]="name" type="text" class="input-box small-input" required>
+    <label>Name *</label>
+    <input [(ngModel)]="approvedByName" type="text" class="input-box small-input">
   </div>
 
   <div class="form-group">
-    <label>PR No <span style="color:red">*</span></label>
-    <input [(ngModel)]="email" type="text" class="input-box small-input" required>
+    <label>PR No *</label>
+    <input [(ngModel)]="approvedPrNo" type="text" class="input-box small-input">
+  </div>
+
+  <div class="form-group">
+    <label>Nature of Approval *</label>
+    <input [(ngModel)]="approvedByNature" type="text" class="input-box small-input">
+  </div>
+
+  <div class="form-group">
+    <label>Remarks *</label>
+    <textarea [(ngModel)]="approvedRemarks" class="input-box"></textarea>
   </div>
 
   <div class="button-row">

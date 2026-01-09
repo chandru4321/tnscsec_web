@@ -1,43 +1,57 @@
 .officers-section {
   font-family: "Times New Roman", serif;
-  padding: 30px;
-  color: #8b4513; /* Brown tone similar to screenshot */
+  color: #5b2c00;
+  margin: 60px 150px;
+  line-height: 1.8;
 }
 
 .title {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
-  text-align: left;
+  margin-bottom: 10px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
   margin-bottom: 25px;
-  color: #000; /* Black title */
+  text-align: center;
 }
 
 .officer-list {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .officer-list li {
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  color: #9c5600;
   margin: 10px 0;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
+  padding-left: 35px;
 }
 
 .officer-list li::before {
-  content: "➥"; /* green arrow */
-  color: green;
-  font-weight: bold;
-  margin-right: 8px;
+  content: "➩";
+  position: absolute;
+  left: 0;
+  color: #5cb85c;
+  font-size: 18px;
 }
 
 .officer-list a {
+  color: #9c5600;
   text-decoration: none;
-  color: #8b4513;
   font-weight: bold;
 }
 
 .officer-list a:hover {
-  color: #0066cc;
   text-decoration: underline;
+  color: #d2691e;
 }

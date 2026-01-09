@@ -1,6 +1,6 @@
 /* Center and give spacing */
 .leftover-container {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 20px;
   font-family: "Times New Roman", serif;
@@ -16,10 +16,11 @@
 
 /* Subheading */
 .subtitle {
-  font-size: 19px;
-  color: #333;
+  font-size: 22px;
   font-weight: 600;
+  color: #333;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 /* Remove default bullets */
@@ -52,7 +53,8 @@
 /* Link text */
 .society-list a {
   text-decoration: none;
-  color: #a05200; /* brownish */
+  color: #a05200;
+  /* brownish */
   transition: color 0.3s;
 }
 

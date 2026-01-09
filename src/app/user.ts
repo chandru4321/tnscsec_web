@@ -9,7 +9,7 @@ export class UserService {
 
   private baseUrl = 'https://lg0w5w01-4000.inc1.devtunnels.ms/api';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getDepartments(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/departments`);

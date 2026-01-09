@@ -54,3 +54,13 @@
     color: #004b8f;
     text-decoration: underline;
 }
+
+.section-title {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 1.125rem;
+    /* ~18px */
+    font-weight: 600;
+    color: #222;
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 0.2px;
+}

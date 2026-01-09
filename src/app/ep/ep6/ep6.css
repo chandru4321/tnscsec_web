@@ -1,5 +1,5 @@
 .vacancy-container {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 60px auto;
     padding: 20px;
     font-family: "Times New Roman", serif;
@@ -13,10 +13,12 @@
 }
 
 .subtitle {
-    font-size: 19px;
-    color: #333;
+
+    font-size: 22px;
     font-weight: 600;
+    color: #333;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .vacancy-list {
@@ -27,10 +29,11 @@
 
 .vacancy-list li {
     position: relative;
-    margin: 12px 0;
-    padding-left: 35px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
+    color: #9c5600;
+    margin: 10px 0;
+    padding-left: 35px;
 }
 
 /* Green arrow icon */

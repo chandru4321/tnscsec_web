@@ -10,7 +10,8 @@
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  color: #8b4513; /* brown */
+  color: #8b4513;
+  /* brown */
   text-decoration: underline;
   margin-bottom: 30px;
 }
@@ -35,7 +36,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #3ca23c; /* green arrow */
+  color: #3ca23c;
+  /* green arrow */
   font-size: 20px;
   line-height: 22px;
 }
@@ -43,11 +45,22 @@
 /* Blue link style */
 .arrangements-list a {
   text-decoration: none;
-  color: #0074cc; /* blue */
+  color: #0074cc;
+  /* blue */
   transition: color 0.3s ease;
 }
 
 .arrangements-list a:hover {
   color: #004b8f;
   text-decoration: underline;
+}
+
+.section-title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.125rem;
+  /* ~18px */
+  font-weight: 600;
+  color: #222;
+  margin: 1rem 0 0.5rem;
+  letter-spacing: 0.2px;
 }

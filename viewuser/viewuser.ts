@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { UserService } from '../src/app/user';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectorRef } from '@angular/core';
 
 
 @Component({
   selector: 'app-viewuser',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './viewuser.html',
   styleUrl: './viewuser.css',
 })
@@ -17,27 +18,29 @@ export class Viewuser {
   status: string = "";
   notFound = false;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private cdr: ChangeDetectorRef) { }
+
 
   searchComplaint() {
     this.userService.getComplaintStatus(this.mobileNumber).subscribe({
-      next: (res) => {
-        if (res.found) {
-          this.complaintData = res.complaintDetails;
-          this.status = res.status;
+      next: (res: any) => {
+
+        console.log("FULL RESPONSE:", res);
+
+        // 🔥 Correct data extraction
+        if (res?.data?.found) {
+          this.complaintData = res.data.complaintDetails;
+          this.status = res.data.status;
           this.notFound = false;
         } else {
           this.complaintData = null;
           this.notFound = true;
         }
       },
-      error: (err) => {
+      error: () => {
         this.complaintData = null;
         this.notFound = true;
       }
     });
   }
-
 }
-
-

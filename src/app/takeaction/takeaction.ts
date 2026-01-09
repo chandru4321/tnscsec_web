@@ -12,23 +12,27 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class TakeAction {
 
-  name: string = '';
-  email: string = '';
+  approvedByName = '';
+  approvedPrNo = '';
+  approvedByNature = '';
+  approvedRemarks = '';
 
   constructor(
     private dialogRef: MatDialogRef<TakeAction>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+  ) { }
 
   submit() {
-    if (!this.name || !this.email) {
-      alert("Both fields are required!");
+    if (!this.approvedByName || !this.approvedPrNo || !this.approvedByNature || !this.approvedRemarks) {
+      alert('All fields are required!');
       return;
     }
 
     this.dialogRef.close({
-      name: this.name,
-      email: this.email
+      approvedByName: this.approvedByName,
+      approvedPrNo: this.approvedPrNo,
+      approvedByNature: this.approvedByNature,
+      approvedRemarks: this.approvedRemarks
     });
   }
 

@@ -18,13 +18,13 @@ export class AdminComponent {
 
   tableData: any[] = [];
   statusMessage: string = "";
-statusType: string = ""; // "success" | "error"
+  statusType: string = ""; // "success" | "error"
 
 
   constructor(
     private http: HttpClient,
     private dialog: MatDialog
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.loadTable();
@@ -42,53 +42,41 @@ statusType: string = ""; // "success" | "error"
   }
 
   openDialog(row: any) {
-  const dialogRef = this.dialog.open(TakeAction, {
-    width: '450px',
-    data: row
-  });
 
-  dialogRef.afterClosed().subscribe(result => {
-    if (result) {
-      console.log("Dialog Submitted Data =", result);
+    const dialogRef = this.dialog.open(TakeAction, {
+      width: '450px',
+      data: row
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) return;
 
       const body = {
-        id: row.id,
-        status: "approved",
-        approvedByName: result.name,
-        approvedPrNo: result.email
+        status: 'approved',
+        approvedByName: result.approvedByName,
+        approvedPrNo: result.approvedPrNo,
+        approvedByNature: result.approvedByNature,
+        approvedRemarks: result.approvedRemarks
       };
 
       this.http.put(
-        `https://lg0w5w01-4000.inc1.devtunnels.ms/api/complaint-register-form2/update-status`,
-            //    `https://lg0w5w01-4000.inc1.devtunnels.ms/api/complaint-register-form2/update-status/${row.id}`,
-
+        `https://lg0w5w01-4000.inc1.devtunnels.ms/api/complaint-register-form2/update-status/${row.id}`,
         body
       ).subscribe({
-        next: (res) => {
-         // alert("Status Updated Successfully!");
+        next: (res: any) => {
+          this.statusType = 'success';
+          this.statusMessage = 'Status Updated Successfully!';
+          row.status = 'approved';
 
-          // Update UI button to "Approved"
-          this.statusType = "success";
-this.statusMessage = "Status Updated Successfully!";
-setTimeout(() => {
-  this.statusMessage = "";
-}, 4000); // au
-
-          row.status = "approved";
+          setTimeout(() => this.statusMessage = '', 4000);
         },
         error: (err) => {
-          console.error("Update API Error:", err);
-          //alert("Update failed! Check API.");
-          this.statusType = "error";
-this.statusMessage = "Update failed! Check API.";
-setTimeout(() => {
-  this.statusMessage = "";
-}, 4000); // au
-
+          console.error('Update API Error:', err);
+          this.statusType = 'error';
+          this.statusMessage = 'Update failed! Check API.';
+          setTimeout(() => this.statusMessage = '', 4000);
         }
       });
-    }
-  });
-
-}
+    });
+  }
 }

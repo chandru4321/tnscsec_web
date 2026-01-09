@@ -1,75 +1,104 @@
 .rti-section {
-  background-color: #ffffff;
-  padding: 40px 60px;
+  max-width: 1800px;
+  /* allows wide government-style layout */
+  width: 100%;
+  /* fills most of screen */
+  margin: auto;
+  /* centers block */
+  padding: 20px 40px;
+  /* breathing space on sides */
   font-family: "Times New Roman", serif;
   color: #003366;
-  width: 800px;
 }
+
+
 
 .main-title {
   text-align: center;
-  color: #004a99;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: bold;
   text-decoration: underline;
-  margin-bottom: 25px;
-  margin-top: 15px;
+  color: #004a99;
+  margin: 25px 0;
 }
 
 .rti-block {
   max-width: 800px;
-  margin-left: 40px;
-  margin: 0 auto;
-  color: #003366;
+  margin: auto;
 }
 
 .officer {
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-bottom: 25px;
 }
 
-.label {
-  font-size: 22px;
-  font-weight: normal;
-  margin-bottom: 5px;
+.info .label {
+  font-size: 20px;
 }
 
-.name {
-  font-size: 23px;
-  margin: 2px 0;
-}
-
-.phone {
-  font-size: 16px;
-  color: #003366;
+.info .name {
+  font-size: 21px;
+  font-weight: bold;
   margin-top: 3px;
 }
 
+.phone {
+  text-align: left;
+  font-size: 16px;
+  padding-top: 6px;
+}
+
 .rti-link {
-  margin: 20px 0 30px 20px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 17px;
+  margin: 20px 0;
 }
 
 .rti-link .icon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  vertical-align: middle;
 }
 
 .rti-link a {
+  margin-left: 5px;
+  font-weight: bold;
   color: #0000cc;
-  text-decoration: none;
-}
-
-.rti-link a:hover {
   text-decoration: underline;
 }
 
 .address {
   text-align: center;
-  line-height: 1.8;
   font-size: 17px;
-  margin-top: 20px;
-  color: #003366;
+  line-height: 1.7;
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+
+  .officer {
+    grid-template-columns: 100%;
+  }
+
+  .phone {
+    padding-top: 4px;
+  }
+
+  .main-title {
+    font-size: 18px;
+  }
+
+  .info .label {
+    font-size: 15px;
+  }
+
+  .info .name {
+    font-size: 16px;
+  }
+
+  .phone {
+    font-size: 14px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
 }

@@ -9,23 +9,36 @@
     <!-- Election Info Section -->
     <div class="election-info">
       <div class="info-box">
-        <p>முடிவுற்ற தேர்தல் நடவடிக்கைகளுக்கான படிவங்கள் பூர்த்தி செய்க (Login)</p>
+
+        <p>
+          முடிவுற்ற தேர்தல் நடவடிக்கைகளுக்கான படிவங்கள் பூர்த்தி செய்க (Login)
+        </p>
       </div>
       <div class="info-box">
-        <p>தேர்தல் படிவங்களை உள்ளீடு செய்வதில் சந்தேகம் இருப்பின் காணொளி காண்க</p>
+        <p>
+          <a href="https://www.youtube.com/watch?v=E7PJPmEXZSc" target="_blank">
+
+            தேர்தல் படிவங்களை உள்ளீடு செய்வதில் சந்தேகம் இருப்பின் காணொளி காண்க </a>
+        </p>
       </div>
 
       <div class="info">
-        <div class="info-box">
-            <a routerLink="/complaintregister"  routerLinkActive="active" style="cursor:pointer"><p>புகாருக்கு</p></a>
-          
+        <div class="info-box1">
+          <a routerLink="/complaintregister" routerLinkActive="active" style="cursor:pointer">
+            <p>புகாருக்கு</p>
+          </a>
+
         </div>
-        <div class="info-box">
-          <a routerLink="/login" routerLinkActive="active" style ="cursor: pointer;"><p>புகாரின் நிலை</p></a>
-        
+        <div class="info-box1">
+          <a routerLink="/viewuser" routerLinkActive="active" style="cursor: pointer;">
+            <p>புகாரின் நிலை</p>
+          </a>
+
         </div>
-        <div class="info-box">
-          <a routerLink="/viewuser" routerLinkActive="active" style="cursor: pointer;"><p>அலுவலகம் மட்டும்</p></a>
+        <div class="info-box1">
+          <a routerLink="/login" routerLinkActive="active" style="cursor: pointer;">
+            <p>அலுவலகம் மட்டும்</p>
+          </a>
         </div>
       </div>
     </div>
@@ -34,30 +47,70 @@
   <!-- Right: Commissioner Info -->
   <div class="commissioner">
     <img src="assets/comm.png" alt="Commissioner" />
-    <h3>Thiru. DAYANAND KATARIA IAS.</h3>
-    <p>Election Commissioner,<br>TamilNadu State Co-Operative Societies Election Commission</p>
+    <div class="csssizereduce">
+      <div class="rtext1">
 
+        <h3>Thiru. DAYANAND KATARIA IAS.</h3>
+      </div>
 
+      <div class="rtext2">
+        <p>Election Commissioner,
+      </div>
+      <div class="rtext3">
 
+        <p>TamilNadu State Co-Operative Societies Election Commission</p>
 
+      </div>
 
-
-
-
-
-
-    
-
-    <div class="button-group">
-      <button class="btn">Brochure</button>
-      <button class="btn">Public Portal</button>
-      <button class="btn">Forms</button>
-      <button class="btn">Act & Rules</button>
     </div>
 
-    <div class="button-group">
-      <button class="btn">Statistical Information</button>
-      <button class="btn highlight">2023 - Cooperative Election Related Circulars Booklet</button>
+
+
+
+
+
+    <br>
+
+
+    <div class="button-group1">
+
+      <a href="/pdfs/RTI/Brochure.pdf" target="_blank">
+        <button class="btn">Brochure</button>
+      </a>
+      <a href="/pdfs/RTI/Portal.pdf" target="_blank">
+
+        <button class="btn">Public Portal</button>
+      </a>
+      <a href="/pdfs/RTI/Forms.pdf" target="_blank">
+
+        <button class="btn">Forms</button>
+      </a>
+
+    </div>
+    <br>
+
+    <div class="button-group2">
+      <a href="/pdfs/RTI/Act & Rule.pdf" target="_blank">
+
+
+
+        <button class="btn">Act & Rules</button>
+      </a>
+
+      <a href="/pdfs/RTI/BasicData.pdf" target="_blank">
+
+        <button class="btn">Statistical Information</button>
+      </a>
+
+    </div>
+    <br>
+    <div class="button-group3">
+      <a href="/pdfs/RTI/Election.pdf" target="_blank">
+
+
+        <button class="btn highlight">2023 - Cooperative Election Related Circulars Booklet</button>
+      </a>
+
     </div>
   </div>
 </div>
@@ -80,14 +133,6 @@
 <div class="middle-section">
 
 
-
-
-
-
-
-
-
-
   <!-- NEWS & EVENTS CARD -->
   <div class="news-card">
 
@@ -102,38 +147,49 @@
       <marquee behavior="scroll" direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();"
         class="marquee-box">
         <!-- News Item 1 -->
-        <a href="RTI/home-pdf" class="news-link">
+        <a routerLink="/electionmanuals" routerLinkActive="active" class="news-link" style="cursor: pointer;">
           <span class="new-badge">New</span>
           தேர்தல் கையேடுகள் மற்றும் துணை கையேடுகள் - 2023
         </a>
+        <br>
+
 
         <!-- News Item 2 -->
-        <a href="#" class="news-link">
+        <a href="/PRESS/01-08-2022.pdf" class="news-link" target="_blank">
           <span class="new-badge">New</span>
-          DAYANAND KATARIA IAS Assuming Charge As Election Commissioner - Press Note 01-08-2022
+          DAYANAND KATARIA IAS Assuming Charge As <br> Election Commissioner - Press Note 01-08-2022
         </a>
+        <br>
+        <!-- News Item 3 (sample) -->
+        <a href="/PRESS/05-09-2022.pdf" class="news-link" target="_blank">
+          <span class="new-badge">New</span>
+          Casual Vancancy 2022 Election Programme <br>- Press Note 05-09-2022 </a>
+
+        <br>
+
 
         <!-- News Item 3 (sample) -->
-        <a href="#" class="news-link">
+        <a href="/PRESS/14-11-2022.pdf" class="news-link" target="_blank">
           <span class="new-badge">New</span>
-          Casual Vancancy 2022 Election Programme - Press Note 15-09-2022 </a>
-
-
-
-        <!-- News Item 3 (sample) -->
-        <a href="#" class="news-link">
-          <span class="new-badge">New</span>
-          Commission Website functioning Reg- Press Note 14-11-2022</a>
+          Commission Website functioning Reg<br>- Press Note 14-11-2022</a>
+        <br>
       </marquee>
     </div>
   </div>
   <div class="election-data">
     <h4>Election Data</h4>
-    <img src="assets/DATA.png" alt="Election Data">
+    <a routerLink="/electiondata" class="election-link" style="cursor: pointer;" routerLinkActive="active">
+
+      <img src="assets/DATA.png" alt="Election Data">
+    </a>
   </div>
 
   <div class="press-notes">
     <h4>Press Notes</h4>
-    <img src="assets/Press.png" alt="Press Notes">
+
+    <a routerLink="/press" class="election-link" style="cursor: pointer;" routerLinkActive="active">
+      <img src="assets/Press.png" alt="Press Notes">
+    </a>
   </div>
+
 </div>
