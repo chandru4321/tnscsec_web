@@ -1,21 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-  height: 100%;
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+/* SAME BASE STYLE FOR ALL BUTTONS */
+.action-buttons button {
+  width: 130px;
+  height: 38px;
+  border-radius: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.custom-dialog-container .mat-mdc-dialog-container {
-  border-radius: 18px !important;
+/* Take Action */
+.action-buttons .take-btn {
+  background: #28a745;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.25);
+}
+
+/* Approved */
+.action-buttons .approved-btn {
+  background: #ffd6d6;
+  color: #7a0000;
+}
+
+/* View */
+.action-buttons .view-btn {
+  background: #1673c5;
+  color: #fff;
+}
+
+.mat-dialog-container {
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+
+.cdk-overlay-pane {
+  max-width: none !important;
+}
+
+.status-popup-panel .mat-dialog-container {
   padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  max-width: 350px !important;
+  width: 350px !important;
+}
+
+.status-popup-panel .cdk-overlay-pane {
   overflow: hidden !important;
 }
 
-.custom-dialog-container .mdc-dialog__surface {
-  border-radius: 18px !important;
+.status-popup-panel .mat-dialog-content {
+  overflow: hidden !important;
 }

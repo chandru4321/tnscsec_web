@@ -1,12 +1,11 @@
 <div class="table-background">
   <h2 class="table">Assigning Person</h2>
-<div *ngIf="statusMessage"
-     [ngClass]="{'success-box': statusType === 'success', 'error-box': statusType === 'error'}"
-     class="message-box">
-  {{ statusMessage }}
-</div>
+  <div *ngIf="statusMessage" [ngClass]="{'success-box': statusType === 'success', 'error-box': statusType === 'error'}"
+    class="message-box">
+    {{ statusMessage }}
+  </div>
   <table class="styled-table">
-    
+
 
     <thead>
       <tr>
@@ -36,22 +35,40 @@
         <td>{{ item.zone_id }}</td>
         <td>{{ item.taluk }}</td>
         <td>{{ item.pincode }}</td>
-       <!--- <td>{{ item.remarks }}</td>-->
+        <!--- <td>{{ item.remarks }}</td>-->
 
         <td>
-<button 
-  (click)="openDialog(item)"
-  [ngStyle]="{
-    'background-color': item.status === 'approved' ? '#ffcccc' : '#007bff',
-    'color': item.status === 'approved' ? 'black' : 'white'
-  }"
-  style="padding: 10px 20px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;"
->
-  {{ item.status === 'approved' ? 'Approved' : 'Take Action' }}
-</button>
+          <div class="action-buttons">
+            <button (click)="item.status !== 'approved' && openDialog(item)" [disabled]="item.status === 'approved'"
+              [class.take-btn]="item.status !== 'approved'" [class.approved-btn]="item.status === 'approved'">
+              {{ item.status === 'approved' ? 'Approved' : 'Take Action' }}
+            </button>
 
 
+
+
+
+            <button class="view-btn" type="button" [routerLink]="['/reportview', item.form1_id]">
+              View
+            </button>
+
+
+
+
+
+
+            <!-- <button class="view-btn" [routerLink]="['/reportview', item.id]">
+              View
+            </button> -->
+
+
+
+
+          </div>
         </td>
+
+
+
 
       </tr>
     </tbody>

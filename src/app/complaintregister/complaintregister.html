@@ -3,17 +3,18 @@
 </div>
 
 <div class="form-container">
-  <div *ngIf="statusMessage"
-     class="top-message-box"
-     [ngClass]="{
+  <div *ngIf="statusMessage" class="top-message-box" [ngClass]="{
        'success': statusType === 'success',
        'error': statusType === 'error'
      }">
-  {{ statusMessage }}
-</div>
+    {{ statusMessage }}
+  </div>
 
 
-  <form (ngSubmit)="submitForm()">
+  <!-- <form (ngSubmit)="submitForm()"> -->
+
+  <form #complaintForm="ngForm" (ngSubmit)="submitForm(complaintForm)">
+
 
     <!-- Row 1 -->
     <div class="row">
@@ -92,10 +93,7 @@
         <label>புகார் சுருக்கம் (Brief Note)</label>
 
         <!-- FIXED FILE INPUT -->
-        <input type="file"
-               name="pdfFile"
-               accept="application/pdf"
-               (change)="onFileSelected($event)">
+        <input type="file" name="pdfFile" accept="application/pdf" (change)="onFileSelected($event)">
 
         <small>Please upload PDF only</small>
       </div>

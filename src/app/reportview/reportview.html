@@ -1,0 +1,53 @@
+<div class="table-background" *ngIf="reportData">
+
+    <div class="top-bar">
+        <h2>Complaint Report</h2>
+        <button class="download-btn" (click)="downloadPdf()">⬇ Download</button>
+    </div>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>District</th>
+                <th>Society Name</th>
+                <th>Petitioner Name</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Zone</th>
+                <th>Taluk</th>
+                <th>Pincode</th>
+                <th>Nature of Conclusion</th>
+                <th>PR No</th>
+                <th>Remarks</th>
+                <th>Approved By</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody *ngIf="reportData">
+            <tr>
+                <td>{{ reportData.departmentName }}</td>
+                <td>{{ reportData.districtName }}</td>
+                <td>{{ reportData.societyName }}</td>
+                <td>{{ reportData.petitionerNameAddr }}</td>
+                <td>{{ reportData.mobileNumber || '-' }}</td>
+                <td>{{ reportData.address || '-' }}</td>
+                <td>{{ reportData.zone_id || '-' }}</td>
+                <td>{{ reportData.taluk || '-' }}</td>
+                <td>{{ reportData.pincode || '-' }}</td>
+                <td>{{ reportData.natureOfConclusion || '-' }}</td>
+
+                <td>{{ reportData.approvedPrNo || reportData.prNo || '-' }}</td>
+                <td>{{ reportData.approvedRemarks || reportData.remarks || '-' }}</td>
+
+
+                <td>{{ reportData.approvedByName || '-' }}</td>
+                <td>{{ reportData.date | date:'dd-MM-yyyy' }}</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+</div>

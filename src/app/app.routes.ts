@@ -14,6 +14,7 @@ import { Viewuser } from '../../viewuser/viewuser';
 import { LoginComponent } from './login/login';
 import { Press } from './press/press';
 import { Electiondata } from './electiondata/electiondata';
+import { Reportview } from './reportview/reportview';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -75,6 +76,10 @@ export const routes: Routes = [
   },
   {
     path: 'electiondata', component: Electiondata
+  },
+  {
+
+    path: 'reportview/:id', component: Reportview
   }
 
 

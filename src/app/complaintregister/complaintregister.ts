@@ -34,7 +34,7 @@ export class Complaintregister implements OnInit {
   statusType: string = "";  // "success" or "error"
 
 
-  constructor(private deptService: UserService) {}
+  constructor(private deptService: UserService) { }
 
   ngOnInit(): void {
 
@@ -64,41 +64,44 @@ export class Complaintregister implements OnInit {
   }
 
   // Submit Final Form
-  submitForm() {
+  submitForm(form: any) {
 
-  if (!this.selectedName || !this.selectedDistrict || !this.selectedZone) {
-    this.statusType = "error";
-    this.statusMessage = "Please select Department, District and Zone.";
-    return;
-  }
-
-  const formData = new FormData();
-
-  formData.append("department_id", this.selectedName);
-  formData.append("district_id", this.selectedDistrict);
-  formData.append("zone_id", this.selectedZone);
-  formData.append("societyName", this.societyName);
-  formData.append("petitionerNameAddr", this.petitionerName);
-  formData.append("mobileNumber", this.mobilenumber);
-  formData.append("address", this.address);
-  formData.append("taluk", this.taluk);
-  formData.append("pincode", this.pincode);
-
-  if (this.pdfFile) {
-    formData.append("pdfFile", this.pdfFile);
-  }
-
-  this.deptService.submitForm(formData).subscribe({
-    next: (res) => {
-      console.log("Form Submitted:", res);
-      this.statusType = "success";
-      this.statusMessage = "Form submitted successfully!";
-    },
-
-    error: (err) => {
-      console.error("Form Submit Error:", err);
+    if (!this.selectedName || !this.selectedDistrict || !this.selectedZone) {
       this.statusType = "error";
-      this.statusMessage = "Something went wrong. Please try again.";
+      this.statusMessage = "Please select Department, District and Zone.";
+      return;
     }
-  });
-  }}
+
+    const formData = new FormData();
+    formData.append("department_id", this.selectedName);
+    formData.append("district_id", this.selectedDistrict);
+    formData.append("zone_id", this.selectedZone);
+    formData.append("societyName", this.societyName);
+    formData.append("petitionerNameAddr", this.petitionerName);
+    formData.append("mobileNumber", this.mobilenumber);
+    formData.append("address", this.address);
+    formData.append("taluk", this.taluk);
+    formData.append("pincode", this.pincode);
+
+    if (this.pdfFile) {
+      formData.append("pdfFile", this.pdfFile);
+    }
+
+    this.deptService.submitForm(formData).subscribe({
+      next: () => {
+        this.statusType = "success";
+        this.statusMessage = "Form submitted successfully!";
+
+        // 🔥 CLEAR FORM COMPLETELY
+        form.resetForm();
+        this.pdfFile = null;
+
+        setTimeout(() => this.statusMessage = "", 4000);
+      },
+      error: () => {
+        this.statusType = "error";
+        this.statusMessage = "Something went wrong. Please try again.";
+      }
+    });
+  }
+}
