@@ -63,6 +63,12 @@ export class Complaintregister implements OnInit {
     this.pdfFile = event.target.files[0];
   }
 
+
+  allowOnlyDigits(event: any) {
+    event.target.value = event.target.value.replace(/[^0-9]/g, '');
+    this.pincode = event.target.value;
+  }
+
   // Submit Final Form
   submitForm(form: any) {
 

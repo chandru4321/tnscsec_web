@@ -86,23 +86,32 @@
     <div class="row">
       <div class="col">
         <label>அஞ்சல் குறியீடு (Pincode)</label>
-        <input type="text" [(ngModel)]="pincode" name="pincode">
+
+        <input type="text" [(ngModel)]="pincode" name="pincode" #pin="ngModel" required pattern="^[0-9]{6}$"
+          maxlength="6" (input)="allowOnlyDigits($event)" placeholder="6 இலக்க Pincode">
+
+        <!-- Error message -->
+        <div class="error" *ngIf="pin.invalid && pin.touched">
+          6 இலக்க அஞ்சல் குறியீடு உள்ளிடவும்
+        </div>
+
       </div>
 
+
       <div class="col">
-        <label>புகார் சுருக்கம் (Brief Note)</label>
+        <label>புகார் சுருக்கம் </label>
 
         <!-- FIXED FILE INPUT -->
         <input type="file" name="pdfFile" accept="application/pdf" (change)="onFileSelected($event)">
 
-        <small>Please upload PDF only</small>
+        <small>Maximum upload file size is <b>5 KB.</b></small>
       </div>
     </div>
 
     <div class="submit-btn">
       <button type="submit">Submit</button>
     </div>
-    <!-- 🔔 GLOBAL TOP MESSAGE BOX -->
+    <!--  GLOBAL TOP MESSAGE BOX -->
 
 
 
