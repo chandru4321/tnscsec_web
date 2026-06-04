@@ -78,6 +78,7 @@ export class Complaintregister implements OnInit {
       return;
     }
 
+
     const formData = new FormData();
     formData.append("department_id", this.selectedName);
     formData.append("district_id", this.selectedDistrict);
@@ -94,11 +95,12 @@ export class Complaintregister implements OnInit {
     }
 
     this.deptService.submitForm(formData).subscribe({
+
       next: () => {
         this.statusType = "success";
         this.statusMessage = "Form submitted successfully!";
 
-        // 🔥 CLEAR FORM COMPLETELY
+        //  CLEAR FORM COMPLETELY
         form.resetForm();
         this.pdfFile = null;
 
