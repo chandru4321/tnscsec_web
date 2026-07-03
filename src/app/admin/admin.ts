@@ -34,7 +34,7 @@ export class AdminComponent {
   }
 
   loadTable() {
-    this.http.get<any>('https://lg0w5w01-4000.inc1.devtunnels.ms/api/complaint-register-form2')
+    this.http.get<any>('https://jk901cnt-5000.inc1.devtunnels.ms/api/complaint-register-form2')
       .subscribe({
         next: (res) => {
           console.log("ADMIN API RESPONSE =", res);
@@ -73,7 +73,7 @@ export class AdminComponent {
       };
 
       this.http.put(
-        `https://lg0w5w01-4000.inc1.devtunnels.ms/api/complaint-register-form2/update-status/${row.id}`,
+        `https://jk901cnt-5000.inc1.devtunnels.ms/api/complaint-register-form2/update-status/${row.id}`,
         body
       ).subscribe({
         // next: (res: any) => {

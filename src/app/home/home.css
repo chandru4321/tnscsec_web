@@ -473,7 +473,7 @@ main.content {
   padding: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   margin-top: -10px;
-  overflow-y: auto;
+  overflow: clip;
   -webkit-overflow-scrolling: touch;
   margin-left: 70px;
 }

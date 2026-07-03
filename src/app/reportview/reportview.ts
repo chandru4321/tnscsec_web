@@ -20,7 +20,7 @@ export class Reportview {
     const id = this.route.snapshot.paramMap.get('id');
 
     this.http.get<any>(
-      'https://lg0w5w01-4000.inc1.devtunnels.ms/api/complaint-register-form2/list'
+      'https://jk901cnt-5000.inc1.devtunnels.ms/api/complaint-register-form2/list'
     ).subscribe(res => {
 
       const list = Array.isArray(res.data) ? res.data : [];

@@ -5,10 +5,10 @@ import { tap } from 'rxjs/operators';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  private apiUrl = 'https://lg0w5w01-4000.inc1.devtunnels.ms/api/auth/login';
+  private apiUrl = 'https://jk901cnt-5000.inc1.devtunnels.ms/api/auth/login';
   private tokenKey = 'authToken';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {
     return this.http.post<any>(this.apiUrl, { username, password }).pipe(

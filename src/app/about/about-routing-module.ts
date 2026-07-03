@@ -7,15 +7,16 @@ import { About4 } from "./about4/about4";
 import { About5 } from "./about5/about5";
 
 const routes: Routes = [
-      { path: 'about1', component: About1 },
-      { path: 'about2', component: About2 },
-      { path: 'about3', component: About3 },
-      { path: 'about4', component: About4 },
-      { path: 'about5', component: About5 }
-];
+  { path: '', redirectTo: 'about1', pathMatch: 'full' },
 
+  { path: 'about1', component: About1 },
+  { path: 'about2', component: About2 },
+  { path: 'about3', component: About3 },
+  { path: 'about4', component: About4 },
+  { path: 'about5', component: About5 }
+];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule,RouterLink,RouterModule,RouterOutlet]
+  exports: [RouterModule, RouterLink, RouterModule, RouterOutlet]
 })
 export class AboutRoutingModule { }
